@@ -1,0 +1,211 @@
+:root {
+    --light-gray: rgb(204, 203, 203);
+    --dark-gray: rgb(157, 155, 155);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+hr {
+    color: var(--light-gray);
+    height: 1px;
+    margin-bottom: 10px;
+}
+.wrapper {
+    width: 92%;
+    margin: 0 auto;
+}
+
+/* Main content */
+#main {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.map {
+    width: 60%;
+}
+.map iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+.menu {
+    width: 40%;
+    overflow-y: scroll;
+    height: 100%;
+}
+.menu .menu-header {
+    width: 100%;
+    background: #fff;
+    padding-top: 10px;
+}
+.menu-header .header-form {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.header-form form {
+    width: 60%;
+    margin-right: 2rem;
+}
+.header-form form input {
+    width: 100%;
+    border: 2px solid var(--light-gray);
+    padding: 5px 10px;
+    height: 2rem;
+    transition: border 0.5s ease-in;
+}
+.header-form form input:hover,
+.header-form form input:active,
+.header-form form input:focus {
+    border-color: #000;
+    transition: border-color 0.2s ease-in;
+}
+.header-form form input::placeholder {
+    color: var(--light-gray);
+}
+.header-form button {
+    border: 0;
+    color: var(--dark-gray);
+    font-weight: 700;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.header-form button:hover {
+    color: #000;
+    transition: color 0.2s ease;
+}
+#mobile-icons {
+    display: none;
+}
+#filter-items {
+    display: none;
+    padding-top: 1rem;
+}
+#filter-items.show{
+    display: block;
+}
+#filter-items hr {
+    margin-bottom: 1rem;
+}
+.checkboxes label {
+    color: var(--dark-gray);
+    font-size: 0.85rem;
+}
+
+
+.mobile-map {
+    display: none;
+    padding-top: 1rem;
+}
+.card {
+    margin-top: 1rem;
+}
+.card .distance {
+    display: flex;
+    align-items: center;
+}
+.distance .arrow-down {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-image: url("/img/pin.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+.arrow-down .number {
+    color: #fff;
+    font-size: 0.85rem;
+}
+.distance .distance-text {
+    color: var(--dark-gray);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.card .address {
+    margin-top: 0.5rem;
+}
+.address ul li {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+}
+.address ul li:last-child {
+    color: orange;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.address .share-link {
+    color: orange;
+    transition: color 0.5s ease-in;
+}
+.address .share-link:hover {
+    color: #000;
+    transition: color 0.2s ease-in;
+}
+.address .black-btns {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.address button {
+    cursor: pointer;
+}
+.black-btns button {
+    border: 2px solid transparent;
+    background: #000;
+    height: 2rem;
+    color: #fff;
+    width: 48%;
+    transition: all 0.5s ease-in;
+}
+.black-btns button:hover {
+    color: #000;
+    background: transparent;
+    border-color: #000;
+    transition: all 0.2s ease-in;
+}
+.address .view-btn {
+    border: 2px solid transparent;
+    background: orange;
+    color: #fff;
+    height: 2rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: all 0.5s ease-in;
+}
+.address .view-btn:hover {
+    color: #000;
+    background: transparent;
+    border-color: orange;
+    transition: all 0.2s ease-in;
+}
+.address .more-info-btn {
+    display: none;
+    border: 0;
+    background: #000;
+    height: 2rem;
+    width: 100%;
+    margin-top: 0.85rem;
+    color: #fff;
+}
